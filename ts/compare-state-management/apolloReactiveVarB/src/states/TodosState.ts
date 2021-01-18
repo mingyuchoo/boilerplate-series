@@ -30,15 +30,6 @@ const todosInitialValue: Todos = {
 // MAKE ReactiveVar
 export const todosVar = makeVar(todosInitialValue);
 
-// CACHE
-export const TodosState = {
-  todos: {
-    read() {
-      return todosVar();
-    },
-  },
-};
-
 function _makeInfo(items: Item[]) {
   return {
     total: items.length,
